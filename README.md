@@ -14,9 +14,8 @@ TicTacToe was made with love by these people and a bunch of awesome [contributor
 
 #### Creator
 
-[![Michael Silva](https://s.gravatar.com/avatar/16866cdbf3edcc2b619db8c3939d35d7?s=70)](https://github.com/MichaelRSilva) |
---- | --- | --- | --- | --- | --- | ---
-[Michael Silva](https://github.com/MichaelRSilva)<br>IBM, Inc. |
+[![Michael Silva](https://s.gravatar.com/avatar/16866cdbf3edcc2b619db8c3939d35d7?s=70)](https://github.com/MichaelRSilva)<br>
+[Michael Silva](https://github.com/MichaelRSilva)<br>IBM, Inc.
 
 ## Usage
 
