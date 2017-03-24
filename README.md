@@ -10,7 +10,7 @@ TicTacToe - FreeCodeCamp's Front-End Project. The following tools / frameworks /
 
 ## Team
 
-TicTacToe was made with love by these people and a bunch of awesome [contributors](https://github.com/MichaelRSilva/PersonalPage).
+TicTacToe was made with love by these people and a bunch of awesome [contributors](https://github.com/MichaelRSilva/tic-tac-toe).
 
 #### Creator
 
