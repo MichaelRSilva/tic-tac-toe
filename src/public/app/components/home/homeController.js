@@ -10,6 +10,12 @@ homeController.$inject = ['$scope'];
 
 function homeController($scope) {
 
+    $scope.gameTableShow            = false;
+    $scope.gameStatusShow           = false;
+    $scope.footerGameShow           = false;
+    $scope.choosePlayerNumberShow   = false;
+    $scope.choosePlayerCharShow     = false;
+    $scope.endGameShow              = false;
 
 
 }
