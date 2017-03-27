@@ -1,0 +1,52 @@
+
+section.choose-player-number{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 90px;
+
+  .image{
+    img{
+      width: 350px;
+    }
+  }
+
+  .ask{
+    @include text-shadow(rgba($font-main-text, 0.2) 5px 5px 0, rgba($font-main-text, 0.2) 2px 2px 0);
+    color: $font-main-text;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 40px;
+  }
+
+  .buttons{
+    margin-top: 60px;
+
+    button{
+
+      padding: 10px;
+      background-color: $font-main-text;
+      font-size: 30px;
+      font-family: $default-font;
+      font-weight: bold;
+      color: $font-second-text;
+      cursor: pointer;
+      border: 1px solid $font-main-text;
+      @include transition(background-color .2s ease);
+      outline: none;
+
+      &:hover{
+        color: $font-main-text;
+        background-color: $font-second-text;
+        border: 1px dashed $font-main-text;
+      }
+
+      &:last-child{
+        margin-left: 50px;
+      }
+    }
+
+
+  }
+}
