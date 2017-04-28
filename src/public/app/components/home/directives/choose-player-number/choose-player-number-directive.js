@@ -17,6 +17,7 @@ function choosePlayerNumber() {
         templateUrl: './app/components/home/directives/choose-player-number/choose-player-number-directive.html',
         scope: {
             playersNumber                   : '=',
+            nextPage                        : '&',
             choosePlayerNumberShow          : '='
         }
     };
@@ -26,7 +27,8 @@ function choosePlayerNumber() {
     function link(scope, element, attrs) {
 
         scope.selectPlayersNumber = function (value) {
-            scope.playersNumber = value;
+            scope.playersNumber          = value;
+            scope.nextPage();
         };
     }
 }

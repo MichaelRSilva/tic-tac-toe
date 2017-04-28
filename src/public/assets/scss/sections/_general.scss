@@ -6,6 +6,7 @@
 
 
 body {
+
   @include background-size(cover);
   background: url(../../dist/img/background.jpg) no-repeat center center fixed;
   width: 100%;
@@ -13,4 +14,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: $second-font;
+
+  .ng-hide{
+    display: none;
+  }
+
+  .ng-hide-add{
+    animation: 0.3s fadeOut ease;
+  }
+
+  .ng-hide-remove{
+    animation: 1s fadeIn ease;
+  }
 }

@@ -14,7 +14,11 @@ function choosePlayerChar() {
     var directive = {
         link: link,
         restrict: 'EA',
-        templateUrl: './app/components/home/directives/choose-player-char/choose-player-char-directive.html'
+        templateUrl: './app/components/home/directives/choose-player-char/choose-player-char-directive.html',
+        scope: {
+            backPage                        : '&',
+            choosePlayerCharShow            : '='
+        }
     };
 
     return directive;

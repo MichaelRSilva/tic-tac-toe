@@ -18,7 +18,8 @@
   "dependencies": {
     "angular": "1.6.2",
     "angular-route": "^1.6.2",
-    "compass-sass-mixins": "*"
+    "compass-sass-mixins": "*",
+    "angular-animate": "^1.6.4"
   },
   "devDependencies": {}
 }

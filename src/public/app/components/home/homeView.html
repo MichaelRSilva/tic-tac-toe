@@ -5,9 +5,12 @@
 
     <choose-player-number
             players-number="playersNumber"
+            next-page="showChooseCharPage()"
             choose-player-number-show="choosePlayerNumberShow"></choose-player-number>
 
-    <choose-player-char></choose-player-char>
+    <choose-player-char
+            back-page="showChooseNumberPage()"
+            choose-player-char-show="choosePlayerCharShow"></choose-player-char>
     <game-table></game-table>
     <end-game></end-game>
     <footer-game></footer-game>

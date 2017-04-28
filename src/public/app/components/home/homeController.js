@@ -26,4 +26,27 @@ function homeController($scope) {
      */
     $scope.playersNumber            = 0;
 
+
+    /**
+     * Pages controls
+     */
+    $scope.showChooseCharPage = function(){
+        $scope.hideAllPages();
+        $scope.choosePlayerCharShow     = true;
+    };
+
+    $scope.showChooseNumberPage = function(){
+        $scope.hideAllPages();
+        $scope.choosePlayerNumberShow   = true;
+    };
+
+    $scope.hideAllPages = function () {
+        $scope.gameTableShow            = false;
+        $scope.gameStatusShow           = false;
+        $scope.footerGameShow           = false;
+        $scope.choosePlayerNumberShow   = false;
+        $scope.choosePlayerCharShow     = false;
+        $scope.endGameShow              = false;
+    };
+
 }
