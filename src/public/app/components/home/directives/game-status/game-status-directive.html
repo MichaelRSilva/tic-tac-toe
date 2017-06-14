@@ -1,20 +1,42 @@
-<header class="game-status" ng-show="gameStatusShow">
+<header class="game-status" ng-show="gameTableShow">
 
-    <div class="player-left">
+    <span ng-if="charP1 == 'c2'">
+        <div class="player-left">
         <img src="/assets/img/darth-vader.svg">
-    </div>
-    <div class="score-left">
-        01
-    </div>
+        </div>
+        <div class="score-left">
+            {{formatScore(scoreP1)}}
+        </div>
+    </span>
+
+    <span ng-if="charP1 == 'c1'">
+        <div class="player-left">
+            <img src="/assets/img/luke-skywalker.svg">
+        </div>
+        <div class="score-left">
+            {{formatScore(scoreP1)}}
+        </div>
+    </span>
 
     <img src="/assets/img/medal.svg" class="medal">
 
 
-    <div class="player-right">
+    <span ng-if="charP2 == 'c1'">
+        <div class="player-right">
         <img src="/assets/img/luke-skywalker.svg">
-    </div>
-    <div class="score-right">
-        00
-    </div>
+        </div>
+        <div class="score-right">
+            {{formatScore(scoreP2)}}
+        </div>
+    </span>
+
+    <span ng-if="charP2 == 'c2'">
+        <div class="player-right">
+        <img src="/assets/img/darth-vader.svg">
+        </div>
+        <div class="score-right">
+            {{formatScore(scoreP2)}}
+        </div>
+    </span>
 
 </header>

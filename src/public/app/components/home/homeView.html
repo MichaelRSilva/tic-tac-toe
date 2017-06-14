@@ -1,7 +1,12 @@
 
 <section class="tic-tac-toe" id="tic-tac-toe">
 
-    <game-status></game-status>
+    <game-status
+            score-p1="scoreP1"
+            score-p2="scoreP2"
+            char-p1="charP1"
+            char-p2="charP2"
+            game-table-show="gameTableShow"></game-status>
 
     <choose-player-number
             players-number="playersNumber"
@@ -10,9 +15,33 @@
 
     <choose-player-char
             back-page="showChooseNumberPage()"
+            players-number="playersNumber"
+            char-p1="charP1"
+            char-p2="charP2"
+            next-page="showGameTable()"
             choose-player-char-show="choosePlayerCharShow"></choose-player-char>
-    <game-table></game-table>
-    <end-game></end-game>
-    <footer-game></footer-game>
+
+    <game-table
+            players-number="playersNumber"
+            char-p1="charP1"
+            char-p2="charP2"
+            game-state="gameState"
+            game-state-win="gameStateWin"
+            has-winner="hasWinner"
+            char-winner="charWinner"
+            add-score="addScore(player)"
+            next-page="showEndGame()"
+            reset-game-state="resetGameState()"
+            game-table-show="gameTableShow"></game-table>
+
+    <end-game
+            end-game-show="endGameShow"
+            has-winner="hasWinner"
+            char-winner="charWinner"
+            before-page="showGameTable()"></end-game>
+
+    <footer-game
+            reset-all="resetAll()"
+            game-table-show="gameTableShow"></footer-game>
 
 </section>

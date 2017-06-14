@@ -1,0 +1,61 @@
+
+section.end-game{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 90px;
+
+  .image{
+    img{
+      width: 350px;
+    }
+  }
+
+  .phrase{
+    @include text-shadow(rgba($font-main-text, 0.2) 5px 5px 0, rgba($font-main-text, 0.2) 2px 2px 0);
+    color: $font-main-text;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 40px;
+  }
+
+  .character{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+    .frame-char{
+      width: $game-size/1.2;
+      height: $game-size/1.2;
+      border-radius: 50%;
+      background-color: rgba($cell-back-color, 0.9);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-right: $game-size/8;
+
+      img{
+        width: 70%;
+      }
+
+      &:last-child{
+        margin-right: 0;
+      }
+
+      &:hover{
+        background-color: rgba($cell-back-color, 0.5);
+      }
+
+      .draw{
+        font-size: $game-size/1.2;
+      }
+    }
+  }
+
+
+}

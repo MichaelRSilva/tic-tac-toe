@@ -1,48 +1,57 @@
 <section class="table" ng-show="gameTableShow">
 
-    <div class="cell">
+    <div class="cell" ng-click="selectCell(0,0)" ng-class="{'win': hasWinner && gameStateWin[0][0]}">
         <div class="intern">
-            <img src="./dist/img/darth-vader.svg">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[0][0] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" ng-show="gameState[0][0] == 'c1'">
         </div>
     </div>
-    <div class="cell middle">
+    <div class="cell middle" ng-click="selectCell(0,1)" ng-class="{'win': hasWinner && gameStateWin[0][1]}">
         <div class="intern">
-            <img src="./dist/img/darth-vader.svg">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[0][1] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" ng-show="gameState[0][1] == 'c1'">
         </div>
     </div>
-    <div class="cell">
+    <div class="cell" ng-click="selectCell(0,2)" ng-class="{'win': hasWinner && gameStateWin[0][2]}">
         <div class="intern">
-            <img src="./dist/img/luke-skywalker.svg" class="luke">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[0][2] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" class="luke" ng-show="gameState[0][2] == 'c1'">
         </div>
     </div>
-    <div class="cell">
+    <div class="cell" ng-click="selectCell(1,0)" ng-class="{'win': hasWinner && gameStateWin[1][0]}">
         <div class="intern">
-            <img src="./dist/img/luke-skywalker.svg" class="luke">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[1][0] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" ng-show="gameState[1][0] == 'c1'">
         </div>
     </div>
-    <div class="cell middle">
+    <div class="cell middle" ng-click="selectCell(1,1)" ng-class="{'win': hasWinner && gameStateWin[1][1]}">
         <div class="intern">
-            <img src="./dist/img/darth-vader.svg">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[1][1] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" ng-show="gameState[1][1] == 'c1'">
         </div>
     </div>
-    <div class="cell">
+    <div class="cell" ng-click="selectCell(1,2)" ng-class="{'win': hasWinner && gameStateWin[1][2]}">
         <div class="intern">
-            <img src="./dist/img/darth-vader.svg">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[1][2] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" ng-show="gameState[1][2] == 'c1'">
         </div>
     </div>
-    <div class="cell">
+    <div class="cell" ng-click="selectCell(2,0)" ng-class="{'win': hasWinner && gameStateWin[2][0]}">
         <div class="intern">
-            <img src="./dist/img/luke-skywalker.svg" class="luke">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[2][0] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" ng-show="gameState[2][0] == 'c1'">
         </div>
     </div>
-    <div class="cell middle">
+    <div class="cell middle" ng-click="selectCell(2,1)" ng-class="{'win': hasWinner && gameStateWin[2][1]}">
         <div class="intern">
-            <img src="./dist/img/darth-vader.svg">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[2][1] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" ng-show="gameState[2][1] == 'c1'">
         </div>
     </div>
-    <div class="cell">
+    <div class="cell" ng-click="selectCell(2,2)" ng-class="{'win': hasWinner && gameStateWin[2][2]}">
         <div class="intern">
-            <img src="./dist/img/luke-skywalker.svg" class="luke">
+            <img src="./dist/img/darth-vader.svg" ng-show="gameState[2][2] == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" class="luke" ng-show="gameState[2][2] == 'c1'">
         </div>
     </div>
 

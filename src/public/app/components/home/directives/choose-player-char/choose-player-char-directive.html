@@ -1,15 +1,19 @@
 <section class="choose-player-char" ng-show="choosePlayerCharShow">
 
-    <div class="ask">
+    <div class="ask" ng-if="playersNumber == 1">
         What character would you like to be ?
     </div>
 
+    <div class="ask" ng-if="playersNumber == 2">
+        Player 1: Would you like to be ?
+    </div>
+
     <div class="characteres">
-        <div class="frame-char">
+        <div class="frame-char" ng-click="selectPlayerChar('c1');">
             <img src="./dist/img/luke-skywalker.svg">
         </div>
 
-        <div class="frame-char">
+        <div class="frame-char" ng-click="selectPlayerChar('c2');">
             <img src="./dist/img/darth-vader.svg">
         </div>
     </div>

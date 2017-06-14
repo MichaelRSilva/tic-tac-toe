@@ -1,5 +1,24 @@
-<section class="end-game" ng-show="endGameShow">
+<section class="end-game" ng-if="endGameShow">
 
-    end game show
+    <div class="phrase" ng-if="charWinner == 'c2'">
+        Darth Vader WINS!
+    </div>
+
+    <div class="phrase" ng-if="charWinner == 'c1'">
+        Luke Skywalker WINS!
+    </div>
+
+    <div class="phrase" ng-if="charWinner == null">
+        DRAAAAAW!
+    </div>
+
+    <div class="character">
+        <div class="frame-char">
+            <img src="./dist/img/darth-vader.svg" ng-if="charWinner == 'c2'">
+            <img src="./dist/img/luke-skywalker.svg" ng-if="charWinner == 'c1'">
+            <div class="draw" ng-if="charWinner == null">?</div>
+        </div>
+    </div>
+
 
 </section>

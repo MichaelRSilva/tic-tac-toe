@@ -16,6 +16,12 @@ section.table{
       margin-right: 3px;
     }
 
+    &.win{
+      .intern{
+        background-color: $cell-back-color;
+      }
+    }
+
     .intern{
       background-color: $cell-intern-color;
       width: 100%;

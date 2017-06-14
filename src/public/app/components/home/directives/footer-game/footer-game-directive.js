@@ -14,7 +14,11 @@ function footerGame() {
     var directive = {
         link: link,
         restrict: 'EA',
-        templateUrl: './app/components/home/directives/footer-game/footer-game-directive.html'
+        templateUrl: './app/components/home/directives/footer-game/footer-game-directive.html',
+        scope: {
+            gameTableShow            : '=',
+            resetAll                 : '&'
+        }
     };
 
     return directive;
