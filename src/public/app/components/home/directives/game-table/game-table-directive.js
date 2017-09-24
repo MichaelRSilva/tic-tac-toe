@@ -37,8 +37,9 @@ function gameTable($timeout) {
         /**
          * States
          */
-        scope.currentPlayer  = '';
-        scope.countMovements = 0;
+        scope.currentPlayer    = '';
+        scope.countMovements   = 0;
+        scope.gameTableBlocked = false;
 
 
         /**
@@ -47,7 +48,7 @@ function gameTable($timeout) {
         scope.selectCell = function (row, col) {
             var winner;
 
-            if(scope.gameState[row][col] == '' && !scope.hasWinner){
+            if(scope.gameState[row][col] == '' && !scope.hasWinner && !scope.gameTableBlocked){
 
                 scope.gameState[row][col] = scope["char" + scope.currentPlayer.toUpperCase()];
                 winner                    = scope.getWinner();
@@ -62,7 +63,7 @@ function gameTable($timeout) {
                         scope.countMovements = 0;
                         scope.nextPage();
                         scope.resetGameState();
-                    }, 1500);
+                    }, 2000);
 
                 }else{
 
@@ -74,9 +75,10 @@ function gameTable($timeout) {
                             scope.countMovements = 0;
                             scope.nextPage();
                             scope.resetGameState();
-                        }, 1500);
+                        }, 2000);
                     }else{
                         scope.setCurrentPlayer();
+                        scope.playComputerPlayer();
                     }
 
                 }
@@ -150,6 +152,28 @@ function gameTable($timeout) {
 
         scope.setCurrentPlayer = function () {
             scope.currentPlayer = scope.currentPlayer != 'p1' ? 'p1' : 'p2';
+        };
+
+        scope.playComputerPlayer = function () {
+            if(scope.playersNumber == 1 && scope.currentPlayer == 'p2'){
+                scope.blockGameTable();
+
+                // TODO: AUTO PLAY TO IMPLEMENT
+                $timeout(function () {
+                    //
+                    //
+                    //
+                    scope.unblockGameTable();
+                }, 2000);
+            }
+        };
+
+        scope.blockGameTable = function () {
+            scope.gameTableBlocked = true;
+        };
+
+        scope.unblockGameTable = function () {
+            scope.gameTableBlocked = false;
         };
 
         scope._addScore = function (player) {
